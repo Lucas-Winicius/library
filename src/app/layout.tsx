@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     template: "%s - Bilioteca",
     default: "Biblioteca Antônino",
   },
-  description: "Bem vindo(a), ao nosso catalogo de livros, acesse e veja se temos o livro que procura.",
+  description:
+    "Bem vindo(a), ao nosso catalogo de livros, acesse e veja se temos o livro que procura.",
 };
 
 export default function RootLayout({
