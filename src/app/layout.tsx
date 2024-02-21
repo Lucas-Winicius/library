@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " flex flex-col min-h-screen"}>
+      <body className={inter.className + " flex flex-col min-h-screen bg-gray-200"}>
         <Header />
         <Suspense fallback={<Loading />}>{children}</Suspense>
         <Footer />
