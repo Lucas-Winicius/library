@@ -2,15 +2,15 @@
 import { MagnifyingGlassIcon } from "@/lib/icons";
 import { FormEvent } from "react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function SearchBar() {
+  const router = useRouter();
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    console.log(`Pesquisando por: ${searchValue}`);
-    setSearchValue("");
+    router.push(`/search?q=${searchValue}`);
   };
 
   return (
