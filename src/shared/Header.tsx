@@ -23,7 +23,8 @@ export default function Header() {
               <SheetDescription>
                 <div className="flex flex-col flex-grow justify-between h-screen">
                   <div className="flex flex-col space-y-3 items-center text-xl text-white font-semibold">
-                    <p className="text-zinc-500">Pesquisar</p>
+                    <Link href="/">Home</Link>
+                    <Link href="/search">Pesquisar</Link>
                     <p className="text-zinc-500">Painel</p>
                     <p className="text-zinc-500">Salvos</p>
                     <span>
