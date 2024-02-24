@@ -13,9 +13,7 @@ export default function Home() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     if (search !== "")
-      fetch(`${apiUrl}/books/search?q=${search}`, {
-        next: { revalidate: 3600 },
-      })
+      fetch(`${apiUrl}/books/search?q=${search}`)
         .then((d) => d.json())
         .then((d) => setBooks(d))
         .catch(() => []);
