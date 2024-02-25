@@ -1,11 +1,14 @@
 export default function Empty() {
   return (
-    <div className="flex-grow flex flex-col items-center justify-center">
+    <div className="flex text-center w-9/12 flex-col items-center justify-center text-gray-900">
       <h1 className="font-bold text-2xl">
-        Ooops!, Desculpe não conseguimos encontar nada.
+        Parece que nossos livros estão de folga! Nada encontrado.
       </h1>
-      <p className="font-medium">
-        Parece que elgo deu errado, mas não se preoculpe não é culpa sua
+      <p className="font-medium text-sm">
+        Provavelmente estão aproveitando umas férias nas prateleiras mais
+        remotas. Mas não se preocupe, estamos aqui para encontrá-los! Tente
+        refinar sua pesquisa ou peça ajuda a um de nossos bibliotecários
+        especialistas em resgates literários.
       </p>
     </div>
   );
