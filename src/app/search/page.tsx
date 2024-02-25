@@ -1,5 +1,5 @@
 "use client";
-import BookHome from "@/components/BookHome";
+import BookHome from "@/components/Books";
 import Empty from "@/components/Empty";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";

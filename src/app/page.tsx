@@ -1,4 +1,4 @@
-import BookHome from "@/components/BookHome";
+import BookHome from "@/components/Books";
 
 export default async function Home() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
