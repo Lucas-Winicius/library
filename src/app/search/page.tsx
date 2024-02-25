@@ -1,6 +1,7 @@
 "use client";
 import BookHome from "@/components/Books";
 import Empty from "@/components/Empty";
+import Error from "@/components/Error";
 import Loading from "@/components/loading";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -24,7 +25,7 @@ export default function Home() {
 
   if (status === "LOADING") return <Loading />;
 
-  if (status === "ERROR") return <h1>ERROR!!</h1>;
+  if (status === "ERROR") return <Error />;
 
   if (books.length)
     return (
