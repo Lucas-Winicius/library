@@ -16,6 +16,7 @@ export default function Home() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     if (search !== "") {
+      setStatus("LOADING")
       fetch(`${apiUrl}/books/search?q=${search}`)
         .then((d) => d.json())
         .then((d) => setBooks(d))
