@@ -1,1 +1,1 @@
-type RequestState = "LOADING" | "LOADED" | "ERROR";
+type RequestState = "LOADING" | "LOADED" | "ERROR" | "EMPTY";

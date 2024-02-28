@@ -15,12 +15,15 @@ export default function Home() {
   useEffect(() => {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-    if (search !== "")
+    if (search !== "") {
       fetch(`${apiUrl}/books/search?q=${search}`)
         .then((d) => d.json())
         .then((d) => setBooks(d))
         .then(() => setStatus("LOADED"))
         .catch(() => setStatus("ERROR"));
+    } else {
+      setStatus("EMPTY");
+    }
   }, [search]);
 
   if (status === "LOADING") return <Loading />;
