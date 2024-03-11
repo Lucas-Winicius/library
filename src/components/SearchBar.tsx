@@ -10,7 +10,7 @@ export default function SearchBar() {
 
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push(`/search?q=${searchValue}`);
+    if (searchValue) router.push(`/search?q=${searchValue}`);
   };
 
   return (
