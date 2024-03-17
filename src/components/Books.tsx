@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 
 export default function BookHome({ book, tag }: { book: Book; tag?: string }) {
-  console.log(tag);
   return (
     <div
       className={`flex flex-col items-center min-w-full ${
