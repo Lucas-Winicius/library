@@ -4,6 +4,7 @@ type Book = {
   category: string;
   amount: number;
   author: string;
+  tag?: string;
   createdAt: Date;
   updatedAt: Date;
 };
