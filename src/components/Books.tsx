@@ -9,7 +9,7 @@ export default function BookHome({ book, tag }: { book: Book; tag?: string }) {
       }`}
     >
       <div
-        className={`relative self-start float-right top-2 sm:left-12 left-6 text-xs bg-black text-white justify-center rounded-sm px-2 py-px h-min ${
+        className={`relative self-start float-right top-2 sm:left-16 left-6 text-xs bg-black text-white justify-center rounded-sm px-2 py-px h-min ${
           !tag ? "hidden" : "flex"
         }`}
       >
