@@ -21,7 +21,7 @@ export default function Header() {
           <SheetContent side="left" className="dark">
             <SheetHeader>
               <SheetDescription>
-                <div className="flex flex-col flex-grow justify-between h-screen">
+                <div className="flex flex-col flex-grow h-screen">
                   <div className="flex flex-col space-y-3 items-center text-xl text-white font-semibold">
                     <Link href="/">Home</Link>
                     <Link href="/search">Pesquisar</Link>
@@ -38,9 +38,14 @@ export default function Header() {
                       </Link>
                     </span>
                   </div>
-                  <div className="flex items-center space-x-2 justify-center font-bold text-white relative bottom-12">
-                    <p className="text-zinc-500">Fazer Login</p>
-                    <UserIcon color="#71717a" />
+                  <div className="font-bold text-white relative top-2/4">
+                    <Link
+                      href="/login"
+                      className="flex items-center space-x-2 justify-center"
+                    >
+                      <p className="text-zinc-500">Fazer Login</p>
+                      <UserIcon color="#71717a" />
+                    </Link>
                   </div>
                 </div>
               </SheetDescription>
