@@ -40,7 +40,7 @@ export default function Header() {
                   </div>
                   <div className="font-bold text-white relative top-2/4">
                     <Link
-                      href="/login"
+                      href="/account"
                       className="flex items-center space-x-2 justify-center"
                     >
                       <p className="text-zinc-500">Fazer Login</p>
