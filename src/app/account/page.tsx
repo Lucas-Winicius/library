@@ -13,9 +13,12 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChangeEvent, useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
+import handleSignup from "./handlers/signup.handler";
 
 export default function Login() {
   const { toast } = useToast();
+  const router = useRouter();
   const [credentials, setCredentials] = useState<Credentials>({
     nick: "",
     name: "",
@@ -25,69 +28,6 @@ export default function Login() {
   const handleFormChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setCredentials({ ...credentials, [id]: value });
-  };
-
-  const handleSignup = () => {
-    const nick = credentials.nick.split("");
-    const name = credentials.name?.split("") || [];
-    const password = credentials.pass.split("");
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-
-    if (!nick.length)
-      return toast({
-        variant: "destructive",
-        title: "Verifique seu username",
-        description: "O nome de usuário não pode estar vazio.",
-      });
-
-    if (nick.indexOf(" ") !== -1)
-      return toast({
-        variant: "destructive",
-        title: "Verifique seu username",
-        description: "O nome de usuário não pode conter espaços.",
-      });
-
-    if (nick.length <= 4)
-      return toast({
-        variant: "destructive",
-        title: "Verifique seu username",
-        description: "O nome de usuário precisa ter mais que 4 caracteres.",
-      });
-
-    if (name?.length <= 2)
-      return toast({
-        variant: "destructive",
-        title: "Verifique seu nome",
-        description: "O seu nome deve conter no minimo 3 letras.",
-      });
-
-    if (password.length <= 8)
-      return toast({
-        variant: "destructive",
-        title: "Verifique sua senha",
-        description: "Sua senha deve conter mais que 8 caracteres.",
-      });
-
-    toast({
-      title: "Aguarde...",
-      description: "Estamos criando sua conta.",
-    });
-
-    fetch(`${apiUrl}/users/signup`, {
-      method: "POST",
-      body: JSON.stringify(credentials),
-      headers: {
-        "Content-type": "application/json",
-      },
-    })
-      .then((r) => r.json())
-      .catch((e) => {
-        return toast({
-          variant: "destructive",
-          title: e.error,
-          description: e.message,
-        });
-      });
   };
 
   return (
@@ -131,7 +71,9 @@ export default function Login() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button onClick={handleSignup}>Criar Conta</Button>
+              <Button onClick={() => handleSignup(credentials, router)}>
+                Criar Conta
+              </Button>
             </CardFooter>
           </Card>
         </TabsContent>
