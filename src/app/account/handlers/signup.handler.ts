@@ -1,5 +1,6 @@
 import { toast } from "@/components/ui/use-toast";
 import Cookies from "js-cookie";
+import { cookieOptions } from "./constants";
 
 export default function handleSignup(credentials: Credentials, router: any) {
   const nick = credentials.nick.split("");
@@ -56,7 +57,6 @@ export default function handleSignup(credentials: Credentials, router: any) {
   })
     .then((r) => r.json())
     .then((data) => {
-      const cookieOptions = { expires: 15 };
       if (data.statusCode) {
         toast({
           variant: "destructive",

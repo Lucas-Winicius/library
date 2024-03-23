@@ -15,6 +15,7 @@ import { ChangeEvent, useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import handleSignup from "./handlers/signup.handler";
+import handleSignin from "./handlers/signin.handler";
 
 export default function Login() {
   const { toast } = useToast();
@@ -106,7 +107,9 @@ export default function Login() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Entrar</Button>
+              <Button onClick={() => handleSignin(credentials, router)}>
+                Entrar
+              </Button>
             </CardFooter>
           </Card>
         </TabsContent>
