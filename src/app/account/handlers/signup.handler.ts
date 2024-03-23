@@ -58,7 +58,7 @@ export default function handleSignup(credentials: Credentials, router: any) {
     .then((r) => r.json())
     .then((data) => {
       if (data.statusCode) {
-        toast({
+        return toast({
           variant: "destructive",
           title: data.error,
           description: data.message,
