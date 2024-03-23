@@ -69,7 +69,7 @@ export default function handleSignup(credentials: Credentials, router: any) {
       Cookies.set("role", data.role, cookieOptions);
 
       toast({
-        title: `Seja Bem-vindo(a), ${data.user.nick}!`,
+        title: `Seja Bem-vindo(a), ${data.user.name}!`,
         description: `Agora você tem acesso a recursos exclusivos.`,
       });
 
