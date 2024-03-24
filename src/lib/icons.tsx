@@ -4,6 +4,7 @@ import {
   MagnifyingGlass,
   ArrowSquareOut,
   User,
+  SignOut,
 } from "@phosphor-icons/react";
 
 export function ListIcon({ size, color }: IconsProps) {
@@ -24,4 +25,8 @@ export function ArrowSquareOutIcon({ size, color }: IconsProps) {
 
 export function UserIcon({ size, color }: IconsProps) {
   return <User size={size || 23} weight="bold" color={color || "white"} />;
+}
+
+export function SignOutIcon({ size, color }: IconsProps) {
+  return <SignOut size={size || 23} weight="bold" color={color || "white"} />;
 }

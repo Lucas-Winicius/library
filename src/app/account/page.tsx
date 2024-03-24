@@ -12,13 +12,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChangeEvent, useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import handleSignup from "./handlers/signup.handler";
 import handleSignin from "./handlers/signin.handler";
 
 export default function Login() {
-  const { toast } = useToast();
   const router = useRouter();
   const [credentials, setCredentials] = useState<Credentials>({
     nick: "",
