@@ -7,8 +7,12 @@ export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/dashboard") && !userToken) {
     return NextResponse.redirect(new URL("/account", request.url));
   }
+
+  if (request.nextUrl.pathname.startsWith("/account") && userToken) {
+    return NextResponse.redirect(new URL("/dashboard", request.url));
+  }
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*"],
+  matcher: ["/dashboard/:path*", "/account"],
 };
