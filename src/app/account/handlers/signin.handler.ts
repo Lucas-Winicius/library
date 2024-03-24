@@ -5,6 +5,20 @@ import { cookieOptions } from "./constants";
 export default function handleSignin(credentials: Credentials, router: any) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
+  if (!credentials.nick)
+    return toast({
+      variant: "destructive",
+      title: "Insira o seu nome de usuario",
+      description: "Para continuarmos preciso de seu nome de usuario.",
+    });
+
+  if (!credentials.pass)
+    return toast({
+      variant: "destructive",
+      title: "Insira sua senha",
+      description: "Insira sua senha para continuarmos.",
+    });
+
   toast({
     title: "Aguarde...",
     description: "Estamos procurando sua conta.",
