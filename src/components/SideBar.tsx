@@ -8,6 +8,7 @@ import {
 import { ArrowSquareOutIcon, ListIcon, UserIcon } from "@/lib/icons";
 import Link from "next/link";
 import User from "./User";
+import DashboardLink from "./DashboardLink";
 
 export default function SideBar() {
   return (
@@ -22,7 +23,7 @@ export default function SideBar() {
               <div className="flex flex-col space-y-3 items-center text-xl text-white font-semibold">
                 <Link href="/">Home</Link>
                 <Link href="/search">Pesquisar</Link>
-                <p className="text-zinc-500">Painel</p>
+                <DashboardLink />
                 <p className="text-zinc-500">Salvos</p>
                 <span>
                   <Link
