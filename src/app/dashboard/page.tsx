@@ -8,7 +8,7 @@ export default async function Dashboard() {
   const books: Book[] = (await data.json()) || [];
 
   return (
-    <div className="flex-grow flex flex-col items-center justify-around space-y-3 py-4 overflow-x-scroll">
+    <div className="flex-grow max-w-max flex flex-col space-y-3 py-4 overflow-x-scroll">
       <Titles />
       <Create />
       {books.map((book) => (

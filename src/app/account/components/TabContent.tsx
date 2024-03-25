@@ -43,6 +43,7 @@ export default function TabContent() {
                 onChange={handleFormChange}
                 id="nick"
                 placeholder="Qual o seu apelido?"
+                value={credentials.nick}
               />
             </div>
             <div className="space-y-1">
@@ -51,6 +52,7 @@ export default function TabContent() {
                 onChange={handleFormChange}
                 id="name"
                 placeholder="Como devemos nos referir a você?"
+                value={credentials.name}
               />
             </div>
             <div className="space-y-1">
@@ -60,6 +62,7 @@ export default function TabContent() {
                 id="pass"
                 placeholder="Insira sua senha"
                 type="password"
+                value={credentials.pass}
               />
             </div>
           </CardContent>
@@ -86,6 +89,7 @@ export default function TabContent() {
                 id="nick"
                 type="text"
                 placeholder="Qual o seu nome de usuario?"
+                value={credentials.nick}
               />
             </div>
             <div className="space-y-1">
@@ -95,6 +99,7 @@ export default function TabContent() {
                 id="pass"
                 type="password"
                 placeholder="Digite sua senha"
+                value={credentials.pass}
               />
             </div>
           </CardContent>

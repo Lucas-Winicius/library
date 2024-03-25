@@ -25,6 +25,7 @@ export default function Create() {
         name="name"
         onChange={handleFormChange}
         placeholder="O livro"
+        value={book.name}
       />
       <input
         type="text"
@@ -32,6 +33,7 @@ export default function Create() {
         name="category"
         onChange={handleFormChange}
         placeholder="Aventura"
+        value={book.category}
       />
       <input
         type="text"
@@ -39,6 +41,7 @@ export default function Create() {
         name="author"
         onChange={handleFormChange}
         placeholder="Lucas Winicius"
+        value={book.author}
       />
       <input
         type="text"
@@ -46,6 +49,7 @@ export default function Create() {
         name="amount"
         onChange={handleFormChange}
         placeholder="23"
+        value={book.amount}
       />
       <button onClick={() => handleCreate(book)}>
         <FilePlusIcon color="black" />
