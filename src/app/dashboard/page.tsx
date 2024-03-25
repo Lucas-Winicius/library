@@ -2,7 +2,7 @@ import Book from "./components/Book";
 
 export default async function Dashboard() {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-  const data = await fetch(`${apiUrl}/books`);
+  const data = await fetch(`${apiUrl}/books`, { next: { revalidate: 1800 } });
   const books: Book[] = (await data.json()) || [];
 
   return (

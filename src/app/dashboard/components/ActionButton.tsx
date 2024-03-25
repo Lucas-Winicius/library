@@ -1,4 +1,5 @@
 import { FloppyDiskBackIcon, TrashIcon } from "@/lib/icons";
+import handleDelete from "../handlers/delete.handler";
 
 export default function ActionButton({
   book,
@@ -9,14 +10,14 @@ export default function ActionButton({
 }) {
   if (book === bookData)
     return (
-      <button>
-        <TrashIcon color="black"  />
+      <button onClick={() => handleDelete(bookData)}>
+        <TrashIcon color="black" />
       </button>
     );
 
   return (
     <button>
-      <FloppyDiskBackIcon color="black"  />
+      <FloppyDiskBackIcon color="black" />
     </button>
   );
 }
