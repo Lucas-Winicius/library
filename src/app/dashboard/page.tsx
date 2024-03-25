@@ -1,3 +1,15 @@
-export default function Dashboard() {
-  return <h1>PAINEL</h1>;
+import Book from "./components/Book";
+
+export default async function Dashboard() {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const data = await fetch(`${apiUrl}/books`);
+  const books: Book[] = (await data.json()) || [];
+
+  return (
+    <div className="flex-grow flex flex-col items-center justify-around space-y-3 py-4 overflow-x-scroll">
+      {books.map((book) => (
+        <Book book={book} key={book.id} />
+      ))}
+    </div>
+  );
 }

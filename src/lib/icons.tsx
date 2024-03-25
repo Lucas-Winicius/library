@@ -5,6 +5,8 @@ import {
   ArrowSquareOut,
   User,
   SignOut,
+  FloppyDiskBack,
+  Trash,
 } from "@phosphor-icons/react";
 
 export function ListIcon({ size, color }: IconsProps) {
@@ -29,4 +31,12 @@ export function UserIcon({ size, color }: IconsProps) {
 
 export function SignOutIcon({ size, color }: IconsProps) {
   return <SignOut size={size || 23} weight="bold" color={color || "white"} />;
+}
+
+export function FloppyDiskBackIcon({ size, color }: IconsProps) {
+  return <FloppyDiskBack size={size || 23} color={color || "white"} />;
+}
+
+export function TrashIcon({ size, color }: IconsProps) {
+  return <Trash size={size || 23} color={color || "white"} />;
 }
