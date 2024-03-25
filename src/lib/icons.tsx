@@ -7,6 +7,7 @@ import {
   SignOut,
   FloppyDiskBack,
   Trash,
+  FilePlus,
 } from "@phosphor-icons/react";
 
 export function ListIcon({ size, color }: IconsProps) {
@@ -39,4 +40,8 @@ export function FloppyDiskBackIcon({ size, color }: IconsProps) {
 
 export function TrashIcon({ size, color }: IconsProps) {
   return <Trash size={size || 23} color={color || "white"} />;
+}
+
+export function FilePlusIcon({ size, color }: IconsProps) {
+  return <FilePlus size={size || 23} color={color || "white"} />;
 }

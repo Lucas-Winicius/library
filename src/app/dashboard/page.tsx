@@ -1,4 +1,5 @@
 import Book from "./components/Book";
+import Create from "./components/Create";
 import Titles from "./components/Titles";
 
 export default async function Dashboard() {
@@ -9,6 +10,7 @@ export default async function Dashboard() {
   return (
     <div className="flex-grow flex flex-col items-center justify-around space-y-3 py-4 overflow-x-scroll">
       <Titles />
+      <Create />
       {books.map((book) => (
         <Book book={book} key={book.id} />
       ))}
