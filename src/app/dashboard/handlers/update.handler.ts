@@ -31,7 +31,7 @@ export default function handleUpdate(data: Book) {
         });
 
       return toast({
-        title: `${data.name} Foi atualizado!`,
+        title: `${data.name} foi atualizado!`,
         description:
           "Pode ser que demore um tempo para ele ser atualizado aqui. Mas não se preocupe ele ja foi atualizado nas pesquisas.",
       });

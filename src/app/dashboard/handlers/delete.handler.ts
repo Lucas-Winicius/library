@@ -29,7 +29,7 @@ export default function handleDelete(data: Book) {
         });
 
       return toast({
-        title: `${data.name} Foi deletado!`,
+        title: `${data.name} foi deletado!`,
         description:
           "Pode ser que ele ainda apareça aqui por algum tempo. Mas ele não aparacerá nas pesquisas.",
       });
