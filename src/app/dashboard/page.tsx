@@ -1,5 +1,6 @@
 import Book from "./components/Book";
 import Create from "./components/Create";
+import MoreDashboard from "./components/MoreDashboard";
 import Titles from "./components/Titles";
 
 export default async function Dashboard() {
@@ -14,6 +15,7 @@ export default async function Dashboard() {
       {books.map((book) => (
         <Book book={book} key={book.id} />
       ))}
+      <MoreDashboard />
     </div>
   );
 }
