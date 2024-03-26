@@ -1,9 +1,11 @@
+import { Separator } from "@/components/ui/separator";
 import { GearSixIcon } from "@/lib/icons";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import Link from "next/link";
 
 export default function MoreDashboard() {
   return (
@@ -14,7 +16,13 @@ export default function MoreDashboard() {
             <GearSixIcon color="black" />
           </button>
         </PopoverTrigger>
-        <PopoverContent>More dashboard links</PopoverContent>
+        <PopoverContent>
+          <div className="flex flex-col">
+            <Link href="/dashboard/books">Gerenciar Livros</Link>
+            <Separator />
+            <Link href="/dashboard/users">Gerenciar Usuarios</Link>
+          </div>
+        </PopoverContent>
       </Popover>
     </div>
   );
