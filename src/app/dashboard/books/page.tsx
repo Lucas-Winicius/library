@@ -1,6 +1,6 @@
 import Book from "./components/Book";
 import Create from "./components/Create";
-import MoreDashboard from "./components/MoreDashboard";
+import MoreDashboard from "../components/MoreDashboard";
 import Titles from "./components/Titles";
 
 export default async function Dashboard() {

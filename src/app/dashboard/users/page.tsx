@@ -1,4 +1,4 @@
-import MoreDashboard from "../books/components/MoreDashboard";
+import MoreDashboard from "../components/MoreDashboard";
 import Titles from "./components/Titles";
 import User from "./components/User";
 

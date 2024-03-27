@@ -17,7 +17,7 @@ export default function MoreDashboard() {
           </button>
         </PopoverTrigger>
         <PopoverContent>
-          <div className="flex flex-col">
+          <div className="flex flex-col space-y-2 text-lg font-semibold text-center">
             <Link href="/dashboard/books">Gerenciar Livros</Link>
             <Separator />
             <Link href="/dashboard/users">Gerenciar Usuarios</Link>
