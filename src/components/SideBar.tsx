@@ -8,6 +8,7 @@ import {
 import { ArrowSquareOutIcon, ListIcon, UserIcon } from "@/lib/icons";
 import Link from "next/link";
 import User from "./User";
+import { Separator } from "@/components/ui/separator";
 import DashboardLink from "./DashboardLink";
 
 export default function SideBar() {
@@ -19,7 +20,7 @@ export default function SideBar() {
       <SheetContent side="left" className="dark">
         <SheetHeader>
           <SheetDescription>
-            <div className="flex flex-col flex-grow h-screen">
+            <div className="flex flex-col space-y-2">
               <div className="flex flex-col space-y-3 items-center text-xl text-white font-semibold">
                 <Link href="/">Home</Link>
                 <Link href="/search">Pesquisar</Link>
@@ -36,9 +37,8 @@ export default function SideBar() {
                   </Link>
                 </span>
               </div>
-              <div className="flex justify-center font-bold text-white relative top-2/4">
-                <User />
-              </div>
+              <Separator />
+              <User />
             </div>
           </SheetDescription>
         </SheetHeader>

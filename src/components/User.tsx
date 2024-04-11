@@ -17,13 +17,16 @@ export default function User() {
 
   if (userToken)
     return (
-      <button
-        onClick={handleLogout}
-        className="flex items-center space-x-2 justify-center text-lg"
-      >
-        <p>Sair</p>
-        <SignOutIcon />
-      </button>
+      <div className="flex flex-col items-center justify-center font-bold text-white space-y-1">
+        <p className="text-xs text-zinc-600">Você está logado.</p>
+        <button
+          onClick={handleLogout}
+          className="flex items-center space-x-2 justify-center text-lg"
+        >
+          <p>Sair</p>
+          <SignOutIcon />
+        </button>
+      </div>
     );
 
   return (
