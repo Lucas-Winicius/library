@@ -32,7 +32,7 @@ export default function User() {
   return (
     <Link
       href="/account"
-      className="flex items-center space-x-2 justify-center"
+      className="flex items-center space-x-2 justify-center font-bold"
     >
       <p className="text-zinc-500">Fazer Login</p>
       <UserIcon color="#71717a" />
