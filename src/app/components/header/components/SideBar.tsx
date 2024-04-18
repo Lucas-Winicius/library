@@ -23,6 +23,7 @@ export default function SideBar() {
             <div className="flex flex-col space-y-2">
               <div className="flex flex-col space-y-3 items-center text-xl text-white font-semibold">
                 <Link href="/">Home</Link>
+                <p className="text-zinc-500">Perfil</p>
                 <Link href="/search">Pesquisar</Link>
                 <DashboardLink />
                 <p className="text-zinc-500">Salvos</p>

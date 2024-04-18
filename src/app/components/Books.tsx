@@ -1,5 +1,3 @@
-import { Badge } from "@/components/ui/badge";
-
 export default function BookHome({ book, tag }: { book: Book; tag?: string }) {
   return (
     <div

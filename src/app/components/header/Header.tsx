@@ -1,5 +1,5 @@
-import SearchBar from "@/components/SearchBar";
-import SideBar from "@/components/SideBar";
+import SearchBar from "./components/SearchBar";
+import SideBar from "./components/SideBar";
 
 export default function Header() {
   return (
